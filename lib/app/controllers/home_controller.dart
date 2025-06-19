@@ -50,7 +50,6 @@ class HomeController extends GetxController {
     final double totalHeightPerPage =
         displayedPageHeight + (verticalMargin * 2);
 
-    // 👇 Hitung halaman berdasarkan posisi ketukan Y
     final int tappedPageIndex =
         (tapOffset.dy / totalHeightPerPage).floor().clamp(0, pageCount - 1);
     print("Menambahkan TTD ke halaman sebelum di $pageNumber");
@@ -95,25 +94,4 @@ class HomeController extends GetxController {
     );
   }
 
-  // // Tambahkan method ini di controller
-  // int getTappedPage(Offset tapPositionInViewer) {
-  //   final zoom = pdfViewerController.zoomLevel;
-  //   final viewerSize = pdfViewSize;
-  //   final pageOffsets = pdfViewerController.pageOffsets;
-
-  //   double y = tapPositionInViewer.dy + pdfViewerController.scrollOffset.dy;
-
-  //   for (int i = 0; i < pageOffsets.length; i++) {
-  //     final pageTop = pageOffsets[i];
-  //     final pageBottom =
-  //         pageTop + pdfViewerController.pagesize[i].height * zoom;
-
-  //     if (y >= pageTop && y <= pageBottom) {
-  //       return i +
-  //           1; // karena index mulai dari 0, sedangkan halaman mulai dari 1
-  //     }
-  //   }
-
-  //   return 1; // fallback default halaman 1
-  // }
 }
