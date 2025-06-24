@@ -1,11 +1,11 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signature_pdf/app/modules/home/widgets/signature_draw_dialog.dart';
+import 'package:signature_pdf/app/modules/homeSignature/widgets/signature_draw_dialog.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import '../../../controllers/home_controller.dart';
 
-class HomeView extends GetView<HomeController> {
+class HomeViewSignature extends GetView<HomeController> {
   final GlobalKey<SfPdfViewerState> pdfViewerKey = GlobalKey();
 
   @override
